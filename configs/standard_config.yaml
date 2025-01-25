@@ -1,0 +1,15 @@
+# Basic config file for CV4Ecology Bespoke waterfowl classifier
+
+number_of_epochs: 50
+path_to_train_df: "/home/Brett/waterfowl_audio_id/data/train_df_after_cleanup.csv"
+path_to_validation_df: "/home/Brett/waterfowl_audio_id/data/validation_df_after_cleanup.csv"
+architecture: "resnet18"
+class_list: ["branta_canadensis", "cygnus_buccinator", "anas_carolinensis", "anas_platyrhynchos", "aix_sponsa"]
+overlay_df: "/home/Brett/waterfowl_audio_id/data/train_df_after_cleanup.csv"
+sample_duration: 2
+bandpass_minf: 0
+bandpass_max_f: 9000
+num_workers: 8
+batch_size: 128
+experiment_dir_path: "/home/Brett/waterfowl_audio_id/runs"
+wandb_project: "nocowild_cv4e_classifier"
